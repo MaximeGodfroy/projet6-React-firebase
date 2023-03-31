@@ -6,11 +6,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Link className={styles.divLogo} to="/">
+      <Link className={styles.divLogo} to="/home">
         <img className={styles.logo} src={logo} alt='logo' />
       </Link>
       <nav className={styles.nav}>
-        <NavLink to="/" className={({ isActive }) => (isActive ? `${styles.link} ${styles.linkActive}` : `${styles.link}`)} >
+        <NavLink to="/home" className={({ isActive }) => (isActive ? `${styles.link} ${styles.linkActive}` : `${styles.link}`)} >
           <span className={styles.desktop}>Accueil</span><span className={styles.mobile}>ACCUEIL</span>
         </NavLink>
         <NavLink to="/about" className={({ isActive }) => (isActive ? `${styles.link} ${styles.linkActive}` : `${styles.link}`)}>

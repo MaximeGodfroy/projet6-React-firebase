@@ -6,7 +6,7 @@ export default function ErrorMessage() {
         <div className={styles.error}>
             <h1 className={styles.alert404}>404</h1>
             <h2 className={styles.description}>Oups! La page que vous demandez n'existe pas</h2>
-            <Link to='/home'>Retourner sur la page d'accueil</Link>
+            <Link to='/projet6-React-firebase'>Retourner sur la page d'accueil</Link>
         </div>
     );
 }

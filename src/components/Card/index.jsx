@@ -49,7 +49,7 @@ export default function Card() {
         </LoaderWrapper>) : 
           (<div className={styles.cardContainer}>
             {flatsList.map((flat) => (
-                <Link to={`./flat/${flat.id}`}
+                <Link to={`/projet6-React-firebase/flat/${flat.id}`}
                     key={flat.id}
                     title={flat.title}
                     picture={flat.cover}

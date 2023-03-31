@@ -19,8 +19,8 @@ export default function MyRouter() {
                 <Routes>
                     <Route exact path='/projet6-React-firebase' element={<Home />} />
                     <Route path='/projet6-React-firebase/about' element={<About />} />
-                    <Route path='/projet6-React-firebase/flat/:id' element={<FlatsSheets />} />
-                    <Route path='/projet6-React-firebase/*' element={<Error />} />
+                    <Route path='/projet6-React-firebase/flat/:id' element={<FlatsSheets />} errorElement={<Error />} />
+                    <Route path='/*' element={<Error />} />
                 </Routes>
                 <Footer />
             </FlatsListProvider>

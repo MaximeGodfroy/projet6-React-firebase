@@ -8,25 +8,28 @@ import About from '../../pages/About';
 import Error from '../../pages/Error';
 import FlatsSheets from '../../pages/FlatsSheets';
 import flatsList from '../../datas/flatsList.json';
+import { FlatsListProvider } from '../../utils/context';
 
 export default function MyRouter() {
 
     return (
         <Router>
-            <Header />
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                {flatsList.map((flat) => (
-                <Route 
-                key={flat.id} 
-                path={`/flat/${flat.id}`} 
-                element={<FlatsSheets />} 
-                />
-                ))}
-                <Route path='/*' element={<Error />} />
-            </Routes>
-            <Footer />
+            <FlatsListProvider>
+                <Header />
+                <Routes>
+                    <Route exact path='/home' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    {flatsList.map((flat) => (
+                        <Route
+                            key={flat.id}
+                            path={`/flat/${flat.id}`}
+                            element={<FlatsSheets />}
+                        />
+                    ))}
+                    <Route path='/*' element={<Error />} />
+                </Routes>
+                <Footer />
+            </FlatsListProvider>
         </Router>
     )
 }

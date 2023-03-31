@@ -2,7 +2,7 @@
   "name": "projet-kasa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maximegodfroy.github.io/home/projet6-React-firebase",
+  "homepage": "https://maximegodfroy.github.io/projet6-React-firebase",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
